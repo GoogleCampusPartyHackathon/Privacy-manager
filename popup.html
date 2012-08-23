@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Privacy Manager</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+		<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="popup.js"></script>
+	</head>
+	<body bgcolor="#F9F9F9">
+		<div id="main">
+			<div class="serviceContainer" style="padding-right: 30px">
+				<div class="serviceHeader">Privacy management</div>
+				<!-- thirdPartyCookiesAllowed -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							3-rd party cookies: 
+							<img src="info.png" width="12px" title="If disabled, Chrome blocks third-party sites from setting cookies."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="thirdPartyCookiesAllowed">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				<!-- autofillEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							auto fill:
+							<img src="info.png" width="12px" title="If enabled, Chrome offers to automatically fill in forms."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="autofillEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- instantEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							instant mode:
+							<img src="info.png" width="12px" title="If enabled, Chrome automatically performs and displays search requests for text you type into the Omnibox as you type it."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="instantEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- safeBrowsingEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Safe browsiong mode:
+							<img src="info.png" width="12px" title="If enabled, Chrome does its best to protect you from phishing and malware."/>
+							
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="safeBrowsingEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- searchSuggestEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Search suggestions:
+							<img src="info.png" width="12px" title="If enabled, Chrome sends the text you type into the Omnibox to your default search engine, which provides predictions of websites and searches that are likely completions of what you've typed so far."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="searchSuggestEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- spellingServiceEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Spelling service:
+							<img src="info.png" width="12px" title="If enabled, Chrome uses a web service to help correct spelling errors."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="spellingServiceEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- translationServiceEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Translation service:
+							<img src="info.png" width="12px" title="If enabled, Chrome offers to translate pages that aren't in a language you read."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="translationServiceEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- hyperlinkAuditingEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Hyperlink auditing:
+							<img src="info.png" width="12px" title="If enabled, Chrome sends auditing pings when requested by a website (<a ping>)."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="hyperlinkAuditingEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- referrersEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Referrers:
+							<img src="info.png" width="12px" title="If enabled, Chrome sends referer headers with your requests."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="referrersEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- networkPredictionEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Network prediction:
+							<img src="info.png" width="12px" title="If enabled, Chrome attempts to speed up your web browsing experience by pre-resolving DNS entries, prerendering sites (<link rel='prefetch' ...>), and preemptively opening TCP and SSL connections to servers."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="networkPredictionEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- alternateErrorPagesEnabled -->
+				<div class="rowContainer">
+					<div class="privacyServiceName">
+							Alternate error pages:
+							<img src="info.png" width="12px" title="If enabled, Chrome uses a web service to help resolve navigation errors."/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="alternateErrorPagesEnabled">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				<div class="rowContainer">
+					<input type="radio" id="" style="width:1px; height:1px; position: absolute; z-index: -5;" />
+					<input type="button" id="incognito" value="Run in incognito mode" />
+				</div>
+			</div>
+			
+			
+			<!-- After closing browser -->
+			<div class="serviceContainer">
+				<div class="serviceHeader">Clear on startup</div>
+				
+				<!-- Cookies -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							Cookies:
+							<img src="info.png" width="12px" title="Clear browser cookies at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="cookies">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- appcache -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							appcache:
+							<img src="info.png" width="12px" title="Clear websites appcaches at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="appcache">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- cache -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							cache:
+							<img src="info.png" width="12px" title="Clear browser cache at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="cache">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- downloads -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							downloads:
+							<img src="info.png" width="12px" title="Clear browser download list at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="downloads">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- fileSystems -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							fileSystems:
+							<img src="info.png" width="12px" title="Clear browser file system at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="fileSystems">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- formData -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							formData:
+							<img src="info.png" width="12px" title="Clear browser stored data at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="formData">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>	
+				</div>
+				
+				<!-- history -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							history:
+							<img src="info.png" width="12px" title="Clear browser history at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="history">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>
+				</div>
+				
+				<!-- indexedDB -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							indexedDB:
+							<img src="info.png" width="12px" title="Clear websites IndexedDB data at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="indexedDB">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>
+				</div>
+				
+				<!-- localStorage -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							localStorage:
+							<img src="info.png" width="12px" title="Clear websites local storage data at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="localStorage">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>
+				</div>
+				
+				<!-- pluginData -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							pluginData:
+							<img src="info.png" width="12px" title="Clear plugins data at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="pluginData">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>
+				</div>
+				
+				<!-- passwords -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							passwords:
+							<img src="info.png" width="12px" title="Clear stored passwords at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="passwords">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>
+				</div>
+				
+				<!-- webSQL -->
+				<div class="rowContainer">
+					<div class="closeBrowserName">
+							webSQL:
+							<img src="info.png" width="12px" title="Clear websites WebSQL data at browser startup"/>
+					</div>
+					<div style="display:inline-table">
+						<p class="field switch" id="webSQL">
+								<label class="cb-enable"><span>On</span></label>
+								<label class="cb-disable selected"><span>Off</span></label>
+								<input type="checkbox" id="checkbox" class="checkbox" name="field2" />
+						</p>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+	</body>
+	
+</html>
